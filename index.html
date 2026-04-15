@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavithra's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div class="home-content">
+                <div class="home-image">
+                    <img src="professional_pic.JPG" alt="Professional Picture" class="proj-diagram">
+                </div>
+                <div class="home-text">
+                    <h1>Pavithra Kamatchi Soundaram</h1>
+                    <p class="tagline">AI Engineer • Real-Time Systems • Multimodal Processing</p>
+                    <p class="description"> I'm a junior at Cornell studying computer science, and most of my work sits at the intersection of real-time ML, signal processing, and systems. I like building things that have to work in real conditions, not just in clean datasets, and a lot of my projects have involved making sense of messy audio, sensor data, or documents and turning them into something usable. I've worked on Parkinson's audio analysis, drone path planning, medical audio ML, and sensing-driven research in Cornell's Hybrid Body Lab. I've also built infrastructure for applied AI teams and developed predictive models across large-scale scientific workflows. This summer, I'll be an AI Engineering intern at Dolby working on real-time audio and ML systems. I'm especially interested in roles that combine ML with systems thinking, multimodal perception, and signal-level understanding.</p>
+                </div>
+            </div>
+            <div class="scroll-down">↓ Scroll Down</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="exp-entry">
+                <div class="exp-image">
+                    <img src="Articul8_Logo.jpg" alt="Logo of Articul8 AI company" class="exp-image-img">
+                </div>
+                <div class="exp-text">
+                    <h3>Software Engineering Intern (Applied AI Research Team)</h3>
+                    <p>Articul8 AI, Santa Clara, CA | May 2024 - August 2024</p>
+                    <div class="proj-text">Articul8 needed a more reliable way to extract text, images, and captions from scientific PDFs, since the existing API often produced incomplete or low-quality outputs. I built a multimodal PDF-processing pipeline using OpenCV, pdfplumber, and PyTesseract that generated higher-fidelity extractions across diverse document formats. I integrated the workflow with AWS S3 for consistent storage of processed outputs and developed modular components to make the pipeline easier to extend and experiment with for future LLM-based document analysis.</div>
+                </div>
+            </div>
+            <div class="exp-entry">
+                <div class="exp-image">
+                    <img src="DSI_logo.png" alt="UChicago Data Science Institute logo" class="exp-image-img">
+                </div>
+                <div class="exp-text">
+                    <h3>Data Science Research Assistant (UCARE Lab)</h3>
+                    <p>University of Chicago Data Science Institute, Chicago, IL | June 2022 - August 2022</p>
+                    <div class="proj-text">I worked with the UChicago Data Science Institute to predict execution times for genomic jobs processed through 107 bioinformatic pipelines in the Genomic Data Commons. The GDC must route hundreds of thousands of jobs between cloud and on-prem machines under strict deadlines, and manual scheduling is slow, expensive, and error-prone. I built XGBoost and Random Forest models using workflow metadata, resource allocations, and file characteristics, and validated performance across more than 562K jobs. The models improved scheduling accuracy by 19.5% and produced stable predictions for both short and long jobs, enabling more cost-efficient routing between compute environments.</div>
+                </div>
+            </div>
+            <div class="exp-entry">
+                <div class="exp-image">
+                    <img src="Cornell_HumEc.jpeg" alt="College of Human Ecology logo" class="exp-image-img">
+                </div>
+                <div class="exp-text">
+                    <h3>AI Engineering Research Assistant</h3>
+                    <p>Hybrid Body Lab, Cornell University | February 2026 - Present</p>
+                    <div class="proj-text">Work on multimodal signal processing and sensing-driven ML systems, focusing on building reliable pipelines for audio, motion, and physiological data. Engineer the ML and signal-processing pipelines that turn the lab's sensing research into working real-time prototypes.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <div class="proj-image-wrapper">
+                    <div class="proj-image">
+                        <img src="Parkinson_presentation_image.png" alt="First slide for Parkinson's Disease Detection Tool Presentation" class="proj-diagram">
+                    </div>
+                    <a href="https://docs.google.com/presentation/d/1FvOpsGxGVOgydOJBfNyY6nfLxOAPHZDbEEV5iw5GfAg/edit?usp=sharing" target="_blank" class="view-presentation-btn">View Full Presentation</a>
+                </div>
+                <div class="proj-text">
+                    <h3>Audio-Signal Processing Tool for Parkinson's Disease Detection using Speech Recordings</h3>
+                    <p>Speech-based Machine Learning system that detects early-stage Parkinson's disease with 93.1% accuracy using vocal biomarkers and tree-based models.</p>
+                    <p><strong>Tech Stack:</strong> Python, Pydub, Vosk, Parselmouth, Librosa, XGBoost, Scikit-learn</p>
+                    <button class="read-more" data-target="parkinsons-details">Read More</button>
+                    <div id="parkinsons-details" class="more-details">
+                        <p> Early-stage Parkinson's disease is difficult to diagnose, and existing imaging tests are expensive and often inaccurate. The goal of this project was to explore whether speech recordings alone could be used as a low-cost early detection method.
+The MDVR_KCL dataset provided recordings of Parkinson's patients and healthy controls, but each file included informal conversation before the scripted reading. The dataset was also small, so increasing sample size without losing signal was essential.
+I used the Vosk speech-to-text model to automatically detect the start of the scripted passage and remove all preceding audio. To expand the dataset, I split each 2-3 minute recording into 20-second segments, producing 145 samples. After pre-emphasis filtering, I extracted acoustic biomarkers such as jitter, shimmer, F0, MFCCs, and HNR using Parselmouth and Librosa.
+I trained four machine learning models (SVMs, Logistic Regression, Random Forests, and XGBoost) using GridSearchCV. Segmenting the audio significantly improved performance: full-length recordings produced 33-66% accuracy, while segmented recordings reached 91-93%. XGBoost and Random Forests achieved the highest accuracy at 93.1%.
+These results show that processed speech data combined with acoustic feature extraction can serve as a scalable, low-cost screening tool for early Parkinson's detection.
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="proj-image">
+                    <img src="FinSight_Architecture_Diagram.png" alt="FinSight Architecture Diagram" class="proj-diagram">
+                </div>
+                <div class="proj-text">
+                    <h3>FinSight AI-Powered Personal Finance Assistant</h3>
+                    <p>AI finance assistant that turns messy transaction data into real-time insights through automated classification, natural-language querying, and parallel analytics.</p>
+                    <p><strong>Tech Stack:</strong> React, TypeScript, FastAPI, Supabase (JWT Auth, Row-Level Security), PostgreSQL, LangChain, OpenAI API</p>
+                    <p><a href="https://github.com/pavithra-kamatchi/personal-finance-assistant" target="_blank" class="github-link">GitHub Repository</a></p>
+                    <button class="read-more" data-target="finsight-details">Read More</button>
+                    <div id="finsight-details" class="more-details">
+                        <p>FinSight addresses a common gap in personal finance tools. People have plenty of transaction data, but it is messy, inconsistent, and difficult to interpret without manual work. I built a system that ingests this data, cleans and structures it, and produces meaningful insights in real time.</p>
+                        <p>The platform uses a PostgreSQL database on Supabase, a FastAPI backend, and a React and TypeScript frontend. The backend validates uploaded transactions, classifies them with an LLM-based agent, and exposes a natural-language query agent that converts user questions into safe SQL. A separate analytics engine runs seven financial analysis tools in parallel, including spending trends, income versus expenses, category breakdowns, anomaly detection, and budget comparisons. Parallel execution reduces dashboard latency by about 70 percent and allows the system to generate a complete analytics report in a few seconds.</p>
+                        <p>The frontend presents these results through a modern interface with interactive charts, budget tracking, protected routes, and a conversational AI assistant. The system provides a responsive and interpretable financial experience built on secure data handling, concurrent processing, and a full-stack architecture designed for extensibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>AI/ML</h3>
+          <ul>
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
+            <li>scikit-learn</li>
+            <li>Audio & signal processing</li>
+            <li>Multimodal ML, LLMs, agentic systems</li>
+            <li>OpenCV/OCR</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Systems & Infrastructure</h3>
+          <ul>
+            <li>FastAPI</li>
+            <li>Supabase</li>
+            <li>AWS S3</li>
+            <li>Docker</li>
+            <li>SQL</li>
+            <li>Data pipelines, concurrency</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Frameworks</h3>
+          <ul>
+            <li>React + TypeScript</li>
+            <li>Pytest</li>
+            <li>Git</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>TypeScript</li>
+            <li>SQL (PostgreSQL, MySQL)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: pk528@cornell.edu</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pavithra-kamatchi-soundaram-792b40252/">linkedin.com/in/pavithra_kamatchi</a></p>
+            <p>GitHub: <a href="https://github.com/pavithra-kamatchi">github.com/pavithra-kamatchi</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
