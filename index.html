@@ -27,7 +27,9 @@
                 <div class="home-text">
                     <h1>Pavithra Kamatchi Soundaram</h1>
                     <p class="tagline">AI Engineer • Real-Time Systems • Multimodal Processing</p>
-                    <p class="description"> I'm a junior at Cornell studying computer science, and most of my work sits at the intersection of real-time ML, signal processing, and systems. I like building things that have to work in real conditions, not just in clean datasets, and a lot of my projects have involved making sense of messy audio, sensor data, or documents and turning them into something usable. I've worked on Parkinson's audio analysis, drone path planning, medical audio ML, and sensing-driven research in Cornell's Hybrid Body Lab. I've also built infrastructure for applied AI teams and developed predictive models across large-scale scientific workflows. This summer, I'll be an AI Engineering intern at Dolby working on real-time audio and ML systems. I'm especially interested in roles that combine ML with systems thinking, multimodal perception, and signal-level understanding.</p>
+                    <p class="description">Hi there! I'm a junior at Cornell studying Computer Science, and most of my work sits at the intersection of real-time ML, signal processing, and systems.</p>
+                    <p class="description">I like building things that work in real conditions, not just in clean datasets. My projects involve making sense of messy audio, sensor data, or documents and turning them into something usable. I've applied this to Parkinson's audio analysis, drone path planning, and research at Cornell's Hybrid Body Lab.</p>
+                    <p class="description">Beyond my research, I have developed infrastructure for applied AI teams and built predictive models for large-scale scientific workflows. This summer, I will be an AI Engineering intern at Dolby working on real-time audio and ML systems. I am especially interested in roles that combine ML with systems thinking, multimodal perception, and signal-level understanding.</p>
                 </div>
             </div>
             <div class="scroll-down">↓ Scroll Down</div>
@@ -44,7 +46,10 @@
                 <div class="exp-text">
                     <h3>Software Engineering Intern (Applied AI Research Team)</h3>
                     <p>Articul8 AI, Santa Clara, CA | May 2024 - August 2024</p>
-                    <div class="proj-text">Articul8 needed a more reliable way to extract text, images, and captions from scientific PDFs, since the existing API often produced incomplete or low-quality outputs. I built a multimodal PDF-processing pipeline using OpenCV, pdfplumber, and PyTesseract that generated higher-fidelity extractions across diverse document formats. I integrated the workflow with AWS S3 for consistent storage of processed outputs and developed modular components to make the pipeline easier to extend and experiment with for future LLM-based document analysis.</div>
+                    <ul class="exp-bullets">
+                        <li>Built a multimodal PDF-processing pipeline using OpenCV, pdfplumber, and PyTesseract to improve extraction fidelity for scientific documents.</li>
+                        <li>Integrated the workflow with AWS S3 for consistent storage and developed modular components to make the pipeline easier to extend for LLM-based analysis.</li>
+                    </ul>
                 </div>
             </div>
             <div class="exp-entry">
@@ -54,7 +59,10 @@
                 <div class="exp-text">
                     <h3>Data Science Research Assistant (UCARE Lab)</h3>
                     <p>University of Chicago Data Science Institute, Chicago, IL | June 2022 - August 2022</p>
-                    <div class="proj-text">I worked with the UChicago Data Science Institute to predict execution times for genomic jobs processed through 107 bioinformatic pipelines in the Genomic Data Commons. The GDC must route hundreds of thousands of jobs between cloud and on-prem machines under strict deadlines, and manual scheduling is slow, expensive, and error-prone. I built XGBoost and Random Forest models using workflow metadata, resource allocations, and file characteristics, and validated performance across more than 562K jobs. The models improved scheduling accuracy by 19.5% and produced stable predictions for both short and long jobs, enabling more cost-efficient routing between compute environments.</div>
+                    <ul class="exp-bullets">
+                        <li>Developed XGBoost and Random Forest models to predict execution times for 562K genomic jobs across 107 bioinformatic pipelines.</li>
+                        <li>Improved scheduling accuracy by 19.5%, enabling more cost-efficient routing between cloud and on-premise compute environments.</li>
+                    </ul>
                 </div>
             </div>
             <div class="exp-entry">
@@ -64,7 +72,9 @@
                 <div class="exp-text">
                     <h3>AI Engineering Research Assistant</h3>
                     <p>Hybrid Body Lab, Cornell University | February 2026 - Present</p>
-                    <div class="proj-text">Work on multimodal signal processing and sensing-driven ML systems, focusing on building reliable pipelines for audio, motion, and physiological data. Engineer the ML and signal-processing pipelines that turn the lab's sensing research into working real-time prototypes.</div>
+                    <ul class="exp-bullets">
+                        <li>Engineer real-time ML and signal-processing pipelines that turn sensing research into functional prototypes for audio, motion, and physiological data.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -97,7 +107,7 @@ These results show that processed speech data combined with acoustic feature ext
             </div>
             <div class="project">
                 <div class="proj-image">
-                    <img src="FinSight_Architecture_Diagram.png" alt="FinSight Architecture Diagram" class="proj-diagram">
+                    <img src="FinSight_Architecture_Diagram.png" alt="FinSight Architecture Diagram" class="proj-diagram lightbox-trigger" id="finsight-diagram" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox-modal').showModal()">
                 </div>
                 <div class="proj-text">
                     <h3>FinSight AI-Powered Personal Finance Assistant</h3>
@@ -170,6 +180,11 @@ These results show that processed speech data combined with acoustic feature ext
             <p>GitHub: <a href="https://github.com/pavithra-kamatchi">github.com/pavithra-kamatchi</a></p>
         </div>
     </footer>
+
+    <dialog id="lightbox-modal" onclick="if(event.target===this)this.close()">
+        <button id="lightbox-close" aria-label="Close" onclick="document.getElementById('lightbox-modal').close()">&times;</button>
+        <img id="lightbox-img" src="" alt="">
+    </dialog>
 
     <script src="script.js"></script>
 </body>
