@@ -15,6 +15,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact Me</a></li>
+            <li><button id="resume-nav-btn">Resume</button></li>
         </ul>
     </nav>
 
@@ -27,9 +28,9 @@
                 <div class="home-text">
                     <h1>Pavithra Kamatchi Soundaram</h1>
                     <p class="tagline">AI Engineer • Real-Time Systems • Multimodal Processing</p>
-                    <p class="description">Hi there! I'm a junior at Cornell studying Computer Science, and most of my work sits at the intersection of real-time ML, signal processing, and systems.</p>
-                    <p class="description">I like building things that work in real conditions, not just in clean datasets. My projects involve making sense of messy audio, sensor data, or documents and turning them into something usable. I've applied this to Parkinson's audio analysis, drone path planning, and research at Cornell's Hybrid Body Lab.</p>
-                    <p class="description">Beyond my research, I have developed infrastructure for applied AI teams and built predictive models for large-scale scientific workflows. This summer, I will be an AI Engineering intern at Dolby working on real-time audio and ML systems. I am especially interested in roles that combine ML with systems thinking, multimodal perception, and signal-level understanding.</p>
+                    <p class="description">Hi there! I'm a CS junior at Cornell who loves building real-time ML and signal-level systems that work on messy, real-world data.</p>
+                    <p class="description">I'm drawn to problems where perception, systems thinking, and multimodal signals meet, whether that's Parkinson's audio, drone navigation, or hybrid-body interfaces. I've also built infrastructure for applied AI teams and large-scale scientific workflows.</p>
+                    <p class="description">This summer, I'll be at Dolby as an AI Engineering intern working on real-time audio and ML.</p>
                 </div>
             </div>
             <div class="scroll-down">↓ Scroll Down</div>
@@ -39,43 +40,53 @@
     <section id="experience">
         <div class="container">
             <h2>Experience</h2>
-            <div class="exp-entry">
-                <div class="exp-image">
-                    <img src="Articul8_Logo.jpg" alt="Logo of Articul8 AI company" class="exp-image-img">
+            <div class="experience-grid">
+
+                <div class="mini-experience-card">
+                    <div class="card-logo-wrapper">
+                        <img src="Articul8_Logo.jpg" alt="Articul8 AI Logo" class="company-logo">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header-row">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="work-date">May 2024 – Aug 2024</span>
+                        </div>
+                        <p class="company-sub">Applied AI Research Team • Articul8 AI</p>
+                        <p class="card-summary">Engineered a multimodal document ingestion pipeline to improve extraction fidelity from unstructured scientific PDFs. Built modular upstream data layers integrated with cloud storage to support downstream LLM analytics.</p>
+                        <p class="card-meta"><strong>Tech Stack:</strong> OpenCV, pdfplumber, PyTesseract, AWS S3</p>
+                    </div>
                 </div>
-                <div class="exp-text">
-                    <h3>Software Engineering Intern (Applied AI Research Team)</h3>
-                    <p>Articul8 AI, Santa Clara, CA | May 2024 - August 2024</p>
-                    <ul class="exp-bullets">
-                        <li>Built a multimodal PDF-processing pipeline using OpenCV, pdfplumber, and PyTesseract to improve extraction fidelity for scientific documents.</li>
-                        <li>Integrated the workflow with AWS S3 for consistent storage and developed modular components to make the pipeline easier to extend for LLM-based analysis.</li>
-                    </ul>
+
+                <div class="mini-experience-card">
+                    <div class="card-logo-wrapper">
+                        <img src="DSI_logo.png" alt="UChicago Data Science Institute Logo" class="company-logo">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header-row">
+                            <h3>Data Science Research Assistant</h3>
+                            <span class="work-date">Jun 2022 – Aug 2022</span>
+                        </div>
+                        <p class="company-sub">UCARE Lab • University of Chicago Data Science Institute</p>
+                        <p class="card-summary">Developed ensemble machine learning architectures to forecast large-scale job execution schedules across bioinformatic workflows. Optimized high-throughput resource routing between cloud and on-premise high-performance compute environments.</p>
+                        <p class="card-meta"><strong>Tech Stack:</strong> Python, XGBoost, Random Forest, HPC Systems</p>
+                    </div>
                 </div>
-            </div>
-            <div class="exp-entry">
-                <div class="exp-image">
-                    <img src="DSI_logo.png" alt="UChicago Data Science Institute logo" class="exp-image-img">
+
+                <div class="mini-experience-card">
+                    <div class="card-logo-wrapper">
+                        <img src="Cornell_HumEc.jpeg" alt="Cornell University Logo" class="company-logo">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-header-row">
+                            <h3>AI Engineering Research Assistant</h3>
+                            <span class="work-date">Feb 2026 – Present</span>
+                        </div>
+                        <p class="company-sub">Hybrid Body Lab • Cornell University</p>
+                        <p class="card-summary">Designing and deploying responsive ML and digital signal processing pipelines, translating hardware sensing research into interactive prototypes driven by raw audio, motion, and physiological data streams.</p>
+                        <p class="card-meta"><strong>Domains:</strong> Real-Time ML, Multimodal Perception, Signal Processing</p>
+                    </div>
                 </div>
-                <div class="exp-text">
-                    <h3>Data Science Research Assistant (UCARE Lab)</h3>
-                    <p>University of Chicago Data Science Institute, Chicago, IL | June 2022 - August 2022</p>
-                    <ul class="exp-bullets">
-                        <li>Developed XGBoost and Random Forest models to predict execution times for 562K genomic jobs across 107 bioinformatic pipelines.</li>
-                        <li>Improved scheduling accuracy by 19.5%, enabling more cost-efficient routing between cloud and on-premise compute environments.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="exp-entry">
-                <div class="exp-image">
-                    <img src="Cornell_HumEc.jpeg" alt="College of Human Ecology logo" class="exp-image-img">
-                </div>
-                <div class="exp-text">
-                    <h3>AI Engineering Research Assistant</h3>
-                    <p>Hybrid Body Lab, Cornell University | February 2026 - Present</p>
-                    <ul class="exp-bullets">
-                        <li>Engineer real-time ML and signal-processing pipelines that turn sensing research into functional prototypes for audio, motion, and physiological data.</li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </section>
@@ -96,12 +107,20 @@
                     <p><strong>Tech Stack:</strong> Python, Pydub, Vosk, Parselmouth, Librosa, XGBoost, Scikit-learn</p>
                     <button class="read-more" data-target="parkinsons-details">Read More</button>
                     <div id="parkinsons-details" class="more-details">
-                        <p> Early-stage Parkinson's disease is difficult to diagnose, and existing imaging tests are expensive and often inaccurate. The goal of this project was to explore whether speech recordings alone could be used as a low-cost early detection method.
-The MDVR_KCL dataset provided recordings of Parkinson's patients and healthy controls, but each file included informal conversation before the scripted reading. The dataset was also small, so increasing sample size without losing signal was essential.
-I used the Vosk speech-to-text model to automatically detect the start of the scripted passage and remove all preceding audio. To expand the dataset, I split each 2-3 minute recording into 20-second segments, producing 145 samples. After pre-emphasis filtering, I extracted acoustic biomarkers such as jitter, shimmer, F0, MFCCs, and HNR using Parselmouth and Librosa.
-I trained four machine learning models (SVMs, Logistic Regression, Random Forests, and XGBoost) using GridSearchCV. Segmenting the audio significantly improved performance: full-length recordings produced 33-66% accuracy, while segmented recordings reached 91-93%. XGBoost and Random Forests achieved the highest accuracy at 93.1%.
-These results show that processed speech data combined with acoustic feature extraction can serve as a scalable, low-cost screening tool for early Parkinson's detection.
-</p>
+                        <h4>The Challenge</h4>
+                        <p>Early-stage Parkinson's is traditionally expensive and difficult to diagnose. This project explores using low-cost speech recordings via the MDVR_KCL dataset, which faced two primary data constraints: noise from informal pre-scripted conversations and a small overall sample size.</p>
+                        <h4>The Pipeline</h4>
+                        <ul class="modal-list">
+                            <li><strong>Data Cleansing:</strong> Integrated the Vosk speech-to-text model to automatically pinpoint the start of scripted passages and strip out preceding audio noise.</li>
+                            <li><strong>Data Augmentation:</strong> Partitioned 2–3 minute audio tracks into 20-second segments, successfully scaling the dataset to 145 high-signal samples.</li>
+                            <li><strong>Feature Extraction:</strong> Applied pre-emphasis filtering and extracted core acoustic biomarkers (Jitter, Shimmer, F0, MFCCs, and HNR) utilizing Parselmouth and Librosa.</li>
+                        </ul>
+                        <h4>The Results</h4>
+                        <ul class="modal-list">
+                            <li>Evaluated four architectures (SVM, Logistic Regression, Random Forests, XGBoost) optimized via GridSearchCV.</li>
+                            <li><strong>Data Segmentation Impact:</strong> Segmenting the audio dramatically optimized performance, boosting classification accuracy from a baseline of 33%–66% to a peak range of 91%–93%.</li>
+                            <li><strong>Top Model:</strong> XGBoost and Random Forests achieved the highest final accuracy at 93.1%.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -116,9 +135,86 @@ These results show that processed speech data combined with acoustic feature ext
                     <p><a href="https://github.com/pavithra-kamatchi/personal-finance-assistant" target="_blank" class="github-link">GitHub Repository</a></p>
                     <button class="read-more" data-target="finsight-details">Read More</button>
                     <div id="finsight-details" class="more-details">
-                        <p>FinSight addresses a common gap in personal finance tools. People have plenty of transaction data, but it is messy, inconsistent, and difficult to interpret without manual work. I built a system that ingests this data, cleans and structures it, and produces meaningful insights in real time.</p>
-                        <p>The platform uses a PostgreSQL database on Supabase, a FastAPI backend, and a React and TypeScript frontend. The backend validates uploaded transactions, classifies them with an LLM-based agent, and exposes a natural-language query agent that converts user questions into safe SQL. A separate analytics engine runs seven financial analysis tools in parallel, including spending trends, income versus expenses, category breakdowns, anomaly detection, and budget comparisons. Parallel execution reduces dashboard latency by about 70 percent and allows the system to generate a complete analytics report in a few seconds.</p>
-                        <p>The frontend presents these results through a modern interface with interactive charts, budget tracking, protected routes, and a conversational AI assistant. The system provides a responsive and interpretable financial experience built on secure data handling, concurrent processing, and a full-stack architecture designed for extensibility.</p>
+                        <h4>The Challenge</h4>
+                        <p>Standard personal finance tools provide raw transaction data, but it is typically messy, inconsistent, and requires heavy manual sorting to be useful. The goal was to build a secure system that ingests this unstructured data and converts it into real-time, interpretable financial intelligence.</p>
+                        <h4>The Architecture</h4>
+                        <ul class="modal-list">
+                            <li><strong>Data Processing & Classification:</strong> Engineered a FastAPI backend that validates incoming data and uses an LLM-based agent to automatically clean and classify messy transactions.</li>
+                            <li><strong>Natural-Language Querying:</strong> Developed a conversational AI agent allowing users to query data using natural language, dynamically converting prompts into secure, optimized SQL.</li>
+                            <li><strong>Concurrent Analytics Engine:</strong> Architected a separate analytics processing module that executes seven financial tools simultaneously (including anomaly detection, spending trends, and budget tracking).</li>
+                            <li><strong>The Stack:</strong> Built utilizing a PostgreSQL database on Supabase, a fast FastAPI routing engine, and a modular React and TypeScript frontend featuring interactive dashboards and protected authentication routing.</li>
+                        </ul>
+                        <h4>The Results</h4>
+                        <ul class="modal-list">
+                            <li><strong>Latency Optimization:</strong> Implementing parallel execution for the analytics engine cut dashboard loading latency by ~70%.</li>
+                            <li><strong>Real-Time Speed:</strong> The system generates a complete, comprehensive financial health report from raw data in just a few seconds.</li>
+                            <li><strong>Extensibility:</strong> Designed a secure, decoupled full-stack architecture optimized for handling concurrent traffic and seamless data integration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="video-container" id="mediq-video-container">
+                    <div class="video-facade" id="mediq-video-facade">
+                        <img src="MediQ_slide.png" alt="MediQ video preview" class="video-poster">
+                        <div class="play-btn">&#9654;</div>
+                    </div>
+                </div>
+                <div class="proj-text">
+                    <h3>MediQ: Real-Time Clinical Triage & Queuing System</h3>
+                    <p>A smart ER queuing platform that transforms static waiting room triage into a continuous monitoring system using periodic voice check-ins to detect patient deterioration and automatically reprioritize queues in real time.</p>
+                    <p><strong>Tech Stack:</strong> Next.js, NestJS, Python, PostgreSQL, Prisma, Socket.IO, WavLM</p>
+                    <p><strong>Domain:</strong> Digital Signal Processing (DSP), Voice Biomarkers, Real-Time Audio, Live Queuing Algorithms</p>
+                    <button class="read-more" data-target="mediq-details">Read More</button>
+                    <div id="mediq-details" class="more-details">
+                        <h4>The Challenge</h4>
+                        <p>Imagine you are an ER doctor. You peek into the waiting room and see dozens of patients with varying severity, all in pain, and you have to decide who to see first. Waiting rooms are unpredictable; a patient's condition can rapidly worsen while they wait, but traditional triage systems only capture their risk at a single point in time. Managing this uncertainty is incredibly stressful, and delayed care for a deteriorating high-risk patient drastically increases the chance of critical complications.</p>
+                        <h4>The Solution & Architecture</h4>
+                        <p>To transform the static ER waiting room into a continuous triage system, we built an AI-assisted monitoring pipeline utilizing a decoupled full-stack architecture:</p>
+                        <ul class="modal-list">
+                            <li><strong>The Full-Stack Flow:</strong> Developed a patient kiosk and a real-time staff dashboard using Next.js and React, backed by a NestJS server and a PostgreSQL database managed via Prisma.</li>
+                            <li><strong>Real-Time Data Streams:</strong> Integrated Socket.IO to enable low-latency, bi-directional communication, instantly pushing browser-based alerts and dynamic queue updates to staff the moment a patient's risk state changes.</li>
+                            <li><strong>Vocal Biomarker & AI Analysis:</strong> Engineered a dedicated Python voice analysis microservice utilizing a WavLM-style feature analysis model alongside an OpenAI-compatible transcription flow to analyze both what the patient says and how they sound.</li>
+                            <li><strong>Automated Outreach:</strong> Configured an asynchronous SMS integration loop to handle automated patient check-in reminders and session tracking throughout their waiting timeline.</li>
+                        </ul>
+                        <h4>The Results</h4>
+                        <ul class="modal-list">
+                            <li><strong>Hackathon Recognition:</strong> Developed and pitched the end-to-end working prototype during the Cornell Health Hackathon, directly addressing the "Rethinking the Emergency Dept Waiting Room" and "Bridge2AI Voice" challenge tracks.</li>
+                            <li><strong>Dynamic Safety Risk Engine:</strong> Successfully mapped real-time audio biomarker updates to clear, active alert states (Green, Yellow, Red), eliminating the static waiting room bottleneck.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="proj-image-wrapper">
+                    <div class="proj-image">
+                        <img src="Path_planning_simulation.png" alt="Drone path planning simulation" class="proj-diagram">
+                    </div>
+                    <div class="proj-image">
+                        <img src="CUAD_FullGroup.JPG" alt="Cornell Autonomous Drone team group photo" class="proj-diagram">
+                    </div>
+                </div>
+                <div class="proj-text">
+                    <h3>Cornell Autonomous Drone Project Team: Path Planning (IARC Mission 10)</h3>
+                    <p>Developing an incremental autonomous navigation pipeline for a master drone navigating an unknown 300 × 80 ft arena filled with AprilTag-designated mines. The system dynamically processes live telemetry streams, inflates obstacle boundaries to enforce a safe 3-foot flight corridor, and computes collision-free trajectories in real time.</p>
+                    <p><strong>Tech Stack:</strong> Python, NumPy, Heapq, Math</p>
+                    <p><strong>Domain:</strong> Autonomous Navigation, Graph-Search Algorithms, Robotics, Telemetry Processing</p>
+                    <button class="read-more" data-target="drone-details">Read More</button>
+                    <div id="drone-details" class="more-details">
+                        <h4>The Challenge</h4>
+                        <p>Autonomous drone navigation in dynamic environments typically suffers from high latency and collision risks when relying on static pathfinding algorithms that must recalculate maps from scratch upon encountering new obstacles. The goal was to build a highly responsive, real-time navigation architecture for a master drone competing in IARC Mission 10, enabling it to autonomously cross a 300 × 80 ft arena while dynamically avoiding a dense field of hidden mines.</p>
+                        <h4>The Architecture</h4>
+                        <ul class="modal-list">
+                            <li><strong>Spatial Costmapping & Ingestion:</strong> Engineered a live telemetry pipeline that processes a stream of incoming AprilTag GPS coordinates, mapping them onto a low-footprint, 0.5m resolution global occupancy grid array built with NumPy.</li>
+                            <li><strong>Geometric Obstacle Inflation:</strong> Developed custom constraint logic that automatically calculates true Euclidean circle safety buffers around detected mines, strictly enforcing a 3-foot flight corridor to guarantee safe passage.</li>
+                            <li><strong>Incremental Path Repair Engine:</strong> Implemented a custom graph-search subsystem utilizing the D* Lite algorithm. By continuously tracking inconsistent cell states and dynamically updating vertex keys on the fly, the script repairs the global trajectory instantly without pausing flight execution.</li>
+                            <li><strong>The Stack:</strong> Programmed in Python using optimized data structures from the heapq and math libraries for efficient priority queue manipulation, coupled with NumPy for localized costmap matrix logic.</li>
+                        </ul>
+                        <h4>The Results</h4>
+                        <ul class="modal-list">
+                            <li><strong>Computational Efficiency:</strong> Utilizing the incremental repair architecture of D* Lite eliminated the need for global map resets, significantly reducing path recomputation times when encountering unexpected obstacles.</li>
+                            <li><strong>Deterministic Safety:</strong> The geometric inflation layer successfully isolated hazardous coordinates, producing smooth, repeatable, and collision-free global trajectories in simulated flight tests.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -184,6 +280,16 @@ These results show that processed speech data combined with acoustic feature ext
     <dialog id="lightbox-modal" onclick="if(event.target===this)this.close()">
         <button id="lightbox-close" aria-label="Close" onclick="document.getElementById('lightbox-modal').close()">&times;</button>
         <img id="lightbox-img" src="" alt="">
+    </dialog>
+
+    <dialog id="project-modal">
+        <button id="project-modal-close" aria-label="Close">&times;</button>
+        <div id="project-modal-content"></div>
+    </dialog>
+
+    <dialog id="resume-modal">
+        <button id="resume-modal-close" aria-label="Close">&times;</button>
+        <iframe src="Pavithra Kamatchi Soundaram Digital Portfolio.pdf" title="Resume"></iframe>
     </dialog>
 
     <script src="script.js"></script>
